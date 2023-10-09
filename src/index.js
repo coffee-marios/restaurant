@@ -1,4 +1,5 @@
 import "./style.css";
+import restaurantImage from "./restaurant.jpg";
 
 const content = document.createElement("div");
 const divNav = document.createElement("nav");
@@ -18,10 +19,10 @@ divTitleHome.classList.add("titleHome");
 const titleHome = document.createElement("h2");
 titleHome.innerHTML = "NAME OF THE RESTAURANT";
 
+// Add the image to our existing div.
 const imageDiv = document.createElement("div");
-const imageHome = document.createElement("img");
-imageHome.src = "restaurant.jpg";
-imageHome.alt = "Restaurant";
+const imageHome = new Image();
+imageHome.src = restaurantImage; // Add the image to our existing div.
 
 const attributes = document.createElement("div");
 attributes.classList.add("attributesImages");
