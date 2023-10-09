@@ -2,6 +2,8 @@ import "./style.css";
 
 const content = document.createElement("div");
 const divNav = document.createElement("nav");
+
+const divNavButtons = document.createElement("div");
 const buttonHome = document.createElement("button");
 const buttonAbout = document.createElement("button");
 const buttonContact = document.createElement("button");
@@ -10,7 +12,10 @@ buttonHome.innerHTML = "HOME";
 buttonAbout.innerHTML = "ABOUT";
 buttonContact.innerHTML = "CONTACT";
 
-const titleHome = document.createElement("h1");
+const divTitleHome = document.createElement("div");
+divTitleHome.classList.add("titleHome");
+
+const titleHome = document.createElement("h2");
 titleHome.innerHTML = "NAME OF THE RESTAURANT";
 
 const imageDiv = document.createElement("div");
@@ -19,6 +24,8 @@ imageHome.src = "restaurant.jpg";
 imageHome.alt = "Restaurant";
 
 const attributes = document.createElement("div");
+attributes.classList.add("attributesImages");
+
 const photo1Attribute = document.createElement("p");
 photo1Attribute.innerHTML = "Photo by ";
 const photo1link = document.createElement("a");
@@ -44,15 +51,20 @@ photo1link_website.setAttribute("target", "_blank");
 document.body.appendChild(content);
 content.appendChild(divNav);
 
-divNav.appendChild(buttonHome);
-divNav.appendChild(buttonAbout);
-divNav.appendChild(buttonContact);
+divNav.appendChild(divNavButtons);
 
-content.appendChild(titleHome);
+divNavButtons.appendChild(buttonHome);
+divNavButtons.appendChild(buttonAbout);
+divNavButtons.appendChild(buttonContact);
+
+content.appendChild(divTitleHome);
+divTitleHome.appendChild(titleHome);
+
 content.appendChild(imageDiv);
 imageDiv.appendChild(imageHome);
 
 imageDiv.appendChild(attributes);
+
 attributes.appendChild(photo1Attribute);
 photo1Attribute.appendChild(photo1link);
 photo1Attribute.appendChild(spanAttribute);

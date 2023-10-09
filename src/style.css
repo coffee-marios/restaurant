@@ -21,10 +21,30 @@ img {
 
 nav {
     text-align: center;
+    padding: 15px;
     background-color: rgb(8, 218, 218);
+
+}
+
+nav>div {
+    display: flex;
+    justify-content: center;
+    column-gap: 12px;
+}
+
+nav>div>button {
+    padding: 6px;
 }
 
 div {
     text-align: center;
 
+}
+
+.titleHome {
+    padding: 18px;
+}
+
+.attributesImages {
+    padding-top: 15px;
 }
