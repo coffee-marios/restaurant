@@ -1,5 +1,13 @@
 import "./style.css";
-import restaurantImage from "./restaurant.jpg";
+//import restaurantImage from "./restaurant.jpg";
+import aboutInsert from "./about.js";
+import contactInsert from "./contact.js";
+import { homeComponent, photoHomeAttribute } from "./home.js";
+
+const homeContent = homeComponent();
+const homeAttribute = photoHomeAttribute();
+const aboutContent = aboutInsert();
+const contactContent = contactInsert();
 
 const content = document.createElement("div");
 const divNav = document.createElement("nav");
@@ -10,8 +18,11 @@ const buttonAbout = document.createElement("button");
 const buttonContact = document.createElement("button");
 
 buttonHome.innerHTML = "HOME";
+buttonHome.setAttribute("id", "homePage");
 buttonAbout.innerHTML = "ABOUT";
+buttonAbout.setAttribute("id", "aboutPage");
 buttonContact.innerHTML = "CONTACT";
+buttonContact.setAttribute("id", "contactPage");
 
 const divTitleHome = document.createElement("div");
 divTitleHome.classList.add("titleHome");
@@ -19,39 +30,8 @@ divTitleHome.classList.add("titleHome");
 const titleHome = document.createElement("h2");
 titleHome.innerHTML = "NAME OF THE RESTAURANT";
 
-// Add the image to our existing div.
-const imageDiv = document.createElement("div");
-const imageHome = new Image();
-imageHome.src = restaurantImage; // Add the image to our existing div.
-
-const attributes = document.createElement("div");
-attributes.classList.add("attributesImages");
-
-const photo1Attribute = document.createElement("p");
-photo1Attribute.innerHTML = "Photo by ";
-const photo1link = document.createElement("a");
-
-photo1link.setAttribute(
-  "href",
-  "https://unsplash.com/@_k8_?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-);
-photo1link.innerHTML = "K8";
-photo1link.setAttribute("target", "_blank");
-
-const spanAttribute = document.createElement("span");
-spanAttribute.innerHTML = " on ";
-
-const photo1link_website = document.createElement("a");
-photo1link_website.setAttribute(
-  "href",
-  "https://unsplash.com/photos/sWEpcc0Rm0U?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash"
-);
-photo1link_website.innerHTML = "Unsplash";
-photo1link_website.setAttribute("target", "_blank");
-
 document.body.appendChild(content);
 content.appendChild(divNav);
-
 divNav.appendChild(divNavButtons);
 
 divNavButtons.appendChild(buttonHome);
@@ -61,12 +41,48 @@ divNavButtons.appendChild(buttonContact);
 content.appendChild(divTitleHome);
 divTitleHome.appendChild(titleHome);
 
-content.appendChild(imageDiv);
-imageDiv.appendChild(imageHome);
+content.appendChild(homeContent);
+content.appendChild(homeAttribute);
 
-imageDiv.appendChild(attributes);
+content.appendChild(aboutContent);
+content.appendChild(contactContent);
 
-attributes.appendChild(photo1Attribute);
-photo1Attribute.appendChild(photo1link);
-photo1Attribute.appendChild(spanAttribute);
-photo1Attribute.appendChild(photo1link_website);
+// get id
+const homeDivId = document.getElementById("homeId");
+const homeAttributeId = document.getElementById("attributesId");
+const aboutDivId = document.getElementById("aboutId");
+const contactDivId = document.getElementById("contactId");
+
+aboutDivId.style.display = "none";
+contactDivId.style.display = "none";
+
+function modifyPageHome() {
+  homeDivId.style.display = "block";
+  contactDivId.style.display = "none";
+  homeAttributeId.style.display = "block";
+  aboutDivId.style.display = "none";
+}
+
+function modifyPageAbout() {
+  homeDivId.style.display = "none";
+  contactDivId.style.display = "none";
+  homeAttributeId.style.display = "none";
+  aboutDivId.style.display = "block";
+}
+
+function modifyPageContact() {
+  console.log(aboutContent);
+  homeDivId.style.display = "none";
+  aboutDivId.style.display = "none";
+  homeAttributeId.style.display = "none";
+  contactDivId.style.display = "block";
+}
+
+const homeButton = document.getElementById("homePage");
+homeButton.addEventListener("click", modifyPageHome);
+
+const aboutButton = document.getElementById("aboutPage");
+aboutButton.addEventListener("click", modifyPageAbout);
+
+const contactButton = document.getElementById("contactPage");
+contactButton.addEventListener("click", modifyPageContact);

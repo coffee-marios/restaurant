@@ -4,7 +4,8 @@
 }
 
 body {
-    background-color: rgb(233, 203, 203);
+    background-color: rgb(11, 11, 11);
+    color: white;
 }
 
 
@@ -22,7 +23,7 @@ img {
 nav {
     text-align: center;
     padding: 15px;
-    background-color: rgb(8, 218, 218);
+    background-color: rgb(17, 23, 23);
 
 }
 
@@ -34,6 +35,8 @@ nav>div {
 
 nav>div>button {
     padding: 6px;
+    background-color: rgb(70, 51, 88);
+    color: whitesmoke;
 }
 
 div {
@@ -43,6 +46,10 @@ div {
 
 .titleHome {
     padding: 18px;
+}
+
+#imageDiv {
+    padding-top: 22px;
 }
 
 .attributesImages {
