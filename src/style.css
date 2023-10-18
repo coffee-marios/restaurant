@@ -9,7 +9,8 @@ body {
 }
 
 #homeId {
-    width: 100%;
+    z-index: 0;
+
 }
 
 img {
@@ -47,21 +48,23 @@ div {
 
 }
 
-.titleHome {
-    padding: 18px;
+#titleHome {
+    position: fixed;
+    width: 100%;
+    top: 80%;
+    text-align: center;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+
 }
 
-#imageDiv {
-    padding-top: 22px;
-}
 
 .attributesImages {
     padding-top: 15px;
 }
 
-.titleH2 {
-    margin: 1rem;
-}
+
 
 table,
 th,

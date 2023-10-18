@@ -25,10 +25,10 @@ buttonContact.innerHTML = "CONTACT";
 buttonContact.setAttribute("id", "contactPage");
 
 const divTitleHome = document.createElement("div");
-divTitleHome.classList.add("titleHome");
+divTitleHome.setAttribute("id", "titleHome");
 
 const titleHome = document.createElement("h2");
-titleHome.innerHTML = "NAME OF THE RESTAURANT";
+titleHome.innerHTML = "JAVASCRIPT RESTAURANT";
 
 document.body.appendChild(content);
 content.appendChild(divNav);
