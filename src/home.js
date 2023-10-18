@@ -3,7 +3,7 @@ import restaurantImage from "./restaurant.jpg";
 export function homeComponent() {
   // Add the image to our existing div.
   const elementHome = document.createElement("div");
-  //imageDiv.classList.add("imageDiv");
+
   elementHome.setAttribute("id", "homeId");
   const imageHome = new Image();
   imageHome.src = restaurantImage; // Add the image to our existing div.

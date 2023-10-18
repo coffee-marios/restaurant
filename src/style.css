@@ -8,12 +8,15 @@ body {
     color: white;
 }
 
+#homeId {
+    width: 100%;
+}
 
 img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 100%;
 }
 
 .name {
@@ -54,4 +57,25 @@ div {
 
 .attributesImages {
     padding-top: 15px;
+}
+
+.titleH2 {
+    margin: 1rem;
+}
+
+table,
+th,
+td {
+    background-color: ghostwhite;
+    text-align: center;
+    color: black;
+    margin: auto;
+    margin-bottom: 4rem;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 8px;
+}
+
+#menuId {
+    padding: 2rem;
 }
