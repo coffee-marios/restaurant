@@ -50,8 +50,8 @@ content.appendChild(contactContent);
 // get id
 const homeDivId = document.getElementById("homeId");
 const homeAttributeId = document.getElementById("attributesId");
-const menuDivId = document.getElementById("menuId");
-const contactDivId = document.getElementById("contactId");
+const menuDivId = document.getElementById("divTitleMenu");
+const contactDivId = document.getElementById("divTitleContact");
 
 menuDivId.style.display = "none";
 contactDivId.style.display = "none";
@@ -60,6 +60,8 @@ function modifyPageHome() {
   homeDivId.style.display = "block";
   contactDivId.style.display = "none";
   homeAttributeId.style.display = "block";
+  titleHome.style.display = "block";
+
   menuDivId.style.display = "none";
 }
 
@@ -67,6 +69,8 @@ function modifyPagemenu() {
   homeDivId.style.display = "none";
   contactDivId.style.display = "none";
   homeAttributeId.style.display = "none";
+  titleHome.style.display = "none";
+
   menuDivId.style.display = "block";
 }
 
@@ -75,6 +79,7 @@ function modifyPageContact() {
   homeDivId.style.display = "none";
   menuDivId.style.display = "none";
   homeAttributeId.style.display = "none";
+  titleHome.style.display = "none";
   contactDivId.style.display = "block";
 }
 

@@ -1,9 +1,9 @@
 export default function menuComponent() {
   const elementMenu = document.createElement("div");
-  elementMenu.setAttribute("id", "menuId");
+  elementMenu.setAttribute("id", "divTitleMenu");
   const titleMenu = document.createElement("h2");
   titleMenu.setAttribute("class", "titleH2");
-  titleMenu.innerText = "Menu";
+  titleMenu.innerText = "MENU";
   const divMenu = document.createElement("div");
 
   // WINGS

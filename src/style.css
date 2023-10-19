@@ -79,6 +79,23 @@ td {
     padding: 8px;
 }
 
-#menuId {
+#divTitleMenu,
+#divTitleContact {
     padding: 2rem;
+}
+
+.titleH2 {
+    padding-bottom: 2.2rem;
+}
+
+.divContactPhoneAddress {
+    padding: 12px;
+    border: 1px solid rgba(255, 255, 0, 0.806);
+    width: fit-content;
+    margin: auto;
+    color: rgb(145, 224, 145);
+}
+
+.divContact {
+    padding-bottom: 3rem;
 }
