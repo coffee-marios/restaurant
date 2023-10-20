@@ -1,4 +1,6 @@
-# restaurant
+# Restaurant
+
+## A simple project: a website made entirely in Javascript.
 
 ## Attributes
 

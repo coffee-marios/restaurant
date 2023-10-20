@@ -69,7 +69,7 @@ div {
 table,
 th,
 td {
-    background-color: ghostwhite;
+    background-color: rgb(69, 69, 237);
     text-align: center;
     color: black;
     margin: auto;
@@ -79,6 +79,10 @@ td {
     padding: 8px;
 }
 
+th {
+    background-color: aquamarine;
+}
+
 #divTitleMenu,
 #divTitleContact {
     padding: 2rem;
@@ -86,6 +90,8 @@ td {
 
 .titleH2 {
     padding-bottom: 2.2rem;
+    color: rgba(219, 253, 65, 0.806);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .divContactPhoneAddress {
